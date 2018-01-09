@@ -1,0 +1,507 @@
++ begin=1
++ num=100
++ rm -rf temp.csv
++ touch temp.csv
++ rm -rf temp_tibet.csv
++ touch temp_tibet.csv
++ (( 1<100 ))
++ ncl tpr_output.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl test.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl prsn_output.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+./main.sh:行24: 警告:立即文档在第 20 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur=2.01
+./main.sh:行29: 警告:立即文档在第 25 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur2=2.16
+./main.sh:行34: 警告:立即文档在第 30 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur3=3.22
+./main.sh:行40: 警告:立即文档在第 36 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur4=6.22
+./main.sh:行46: 警告:立即文档在第 42 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur5=6.24
+./main.sh:行52: 警告:立即文档在第 48 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur6=12.91
++ str='MSnow[j][k]=2.01*out[j][k];'
++ str2='193s/.*/MSnow[j][k]=2.01*out[j][k];/'
++ sed -i -r '193s/.*/MSnow[j][k]=2.01*out[j][k];/' PDD_V1.0.cpp
++ str3='MSnow[j][k]=(0.015*Tjja)+(2.16*out[j][k]);'
++ str4='195s/.*/MSnow[j][k]=(0.015*Tjja)+(2.16*out[j][k]);/'
++ sed -i -r '195s/.*/MSnow[j][k]=(0.015*Tjja)+(2.16*out[j][k]);/' PDD_V1.0.cpp
++ str5='MSnow[j][k]=3.22*out[j][k];'
++ str6='197s/.*/MSnow[j][k]=3.22*out[j][k];/'
++ sed -i -r '197s/.*/MSnow[j][k]=3.22*out[j][k];/' PDD_V1.0.cpp
++ str7='MIce[j][k]=6.22*out[j][k];'
++ str8='216s/.*/MIce[j][k]=6.22*out[j][k];/'
++ sed -i -r '216s/.*/MIce[j][k]=6.22*out[j][k];/' PDD_V1.0.cpp
++ str9='MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.24*out[j][k]);'
++ str10='218s/.*/MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.24*out[j][k]);/'
++ sed -i -r '218s/.*/MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.24*out[j][k]);/' PDD_V1.0.cpp
++ str11='MIce[j][k]=12.91*out[j][k];'
++ str12='220s/.*/MIce[j][k]=12.91*out[j][k];/'
++ sed -i -r '220s/.*/MIce[j][k]=12.91*out[j][k];/' PDD_V1.0.cpp
++ g++ -o al.out PDD_V1.0.cpp -lgsl -lgslcblas -L/home/the/gsl_1.9/lib -lm
++ ./al.out
++ ncl blc_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl sftlf_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl snd_CCSM_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl avg_snd.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	1e+20
++ ncl avg_blc.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	9.96921e+36
++ ncl data_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	1e+20
+warning:VarVarWrite: rhs has no dimension name or coordinate variable, deleting name of lhs dimension number (0) and destroying coordinate var,  use "(/../)" if this is not desired outcome
+warning:["Execute.c":8575]:Execute: Error occurred at or near line 36 in file data_out.ncl
+
++ ncl comp_ccsm.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: a
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	5.938361
+++ sed -n 1p ncltmp.txt
++ comp=5.938361
++ echo 5.938361
+5.938361
++ echo 2.01,5.938361
++ ncl comp_ccsm_tibet.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: a
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	0.0008109481
+++ sed -n 1p ncltmp_tibet.txt
++ comp=0.0008109481
++ echo 0.0008109481
+0.0008109481
++ echo 2.01,0.0008109481
++ begin=2
++ (( 2<100 ))
++ ncl tpr_output.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl test.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl prsn_output.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+./main.sh:行24: 警告:立即文档在第 20 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur=2.02
+./main.sh:行29: 警告:立即文档在第 25 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur2=2.18
+./main.sh:行34: 警告:立即文档在第 30 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur3=3.26
+./main.sh:行40: 警告:立即文档在第 36 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur4=6.30
+./main.sh:行46: 警告:立即文档在第 42 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur5=6.33
+./main.sh:行52: 警告:立即文档在第 48 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur6=13.08
++ str='MSnow[j][k]=2.02*out[j][k];'
++ str2='193s/.*/MSnow[j][k]=2.02*out[j][k];/'
++ sed -i -r '193s/.*/MSnow[j][k]=2.02*out[j][k];/' PDD_V1.0.cpp
++ str3='MSnow[j][k]=(0.015*Tjja)+(2.18*out[j][k]);'
++ str4='195s/.*/MSnow[j][k]=(0.015*Tjja)+(2.18*out[j][k]);/'
++ sed -i -r '195s/.*/MSnow[j][k]=(0.015*Tjja)+(2.18*out[j][k]);/' PDD_V1.0.cpp
++ str5='MSnow[j][k]=3.26*out[j][k];'
++ str6='197s/.*/MSnow[j][k]=3.26*out[j][k];/'
++ sed -i -r '197s/.*/MSnow[j][k]=3.26*out[j][k];/' PDD_V1.0.cpp
++ str7='MIce[j][k]=6.30*out[j][k];'
++ str8='216s/.*/MIce[j][k]=6.30*out[j][k];/'
++ sed -i -r '216s/.*/MIce[j][k]=6.30*out[j][k];/' PDD_V1.0.cpp
++ str9='MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.33*out[j][k]);'
++ str10='218s/.*/MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.33*out[j][k]);/'
++ sed -i -r '218s/.*/MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.33*out[j][k]);/' PDD_V1.0.cpp
++ str11='MIce[j][k]=13.08*out[j][k];'
++ str12='220s/.*/MIce[j][k]=13.08*out[j][k];/'
++ sed -i -r '220s/.*/MIce[j][k]=13.08*out[j][k];/' PDD_V1.0.cpp
++ g++ -o al.out PDD_V1.0.cpp -lgsl -lgslcblas -L/home/the/gsl_1.9/lib -lm
++ ./al.out
++ ncl blc_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl sftlf_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl snd_CCSM_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl avg_snd.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	1e+20
++ ncl avg_blc.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	9.96921e+36
++ ncl data_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	1e+20
+warning:VarVarWrite: rhs has no dimension name or coordinate variable, deleting name of lhs dimension number (0) and destroying coordinate var,  use "(/../)" if this is not desired outcome
+warning:["Execute.c":8575]:Execute: Error occurred at or near line 36 in file data_out.ncl
+
++ ncl comp_ccsm.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: a
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	5.93688
+++ sed -n 1p ncltmp.txt
++ comp=5.93688
++ echo 5.93688
+5.93688
++ echo 2.02,5.93688
++ ncl comp_ccsm_tibet.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: a
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	0.0008088875
+++ sed -n 1p ncltmp_tibet.txt
++ comp=0.0008088875
++ echo 0.0008088875
+0.0008088875
++ echo 2.02,0.0008088875
++ begin=3
++ (( 3<100 ))
++ ncl tpr_output.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl test.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl prsn_output.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+./main.sh:行24: 警告:立即文档在第 20 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur=2.03
+./main.sh:行29: 警告:立即文档在第 25 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur2=2.18
+./main.sh:行34: 警告:立即文档在第 30 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur3=3.26
+./main.sh:行40: 警告:立即文档在第 36 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur4=6.30
+./main.sh:行46: 警告:立即文档在第 42 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur5=6.33
+./main.sh:行52: 警告:立即文档在第 48 行被文件结束符分隔 (需要 `EOF')
+++ bc
+(standard_in) 3: illegal character: O
+(standard_in) 3: syntax error
++ cur6=13.08
++ str='MSnow[j][k]=2.03*out[j][k];'
++ str2='193s/.*/MSnow[j][k]=2.03*out[j][k];/'
++ sed -i -r '193s/.*/MSnow[j][k]=2.03*out[j][k];/' PDD_V1.0.cpp
++ str3='MSnow[j][k]=(0.015*Tjja)+(2.18*out[j][k]);'
++ str4='195s/.*/MSnow[j][k]=(0.015*Tjja)+(2.18*out[j][k]);/'
++ sed -i -r '195s/.*/MSnow[j][k]=(0.015*Tjja)+(2.18*out[j][k]);/' PDD_V1.0.cpp
++ str5='MSnow[j][k]=3.26*out[j][k];'
++ str6='197s/.*/MSnow[j][k]=3.26*out[j][k];/'
++ sed -i -r '197s/.*/MSnow[j][k]=3.26*out[j][k];/' PDD_V1.0.cpp
++ str7='MIce[j][k]=6.30*out[j][k];'
++ str8='216s/.*/MIce[j][k]=6.30*out[j][k];/'
++ sed -i -r '216s/.*/MIce[j][k]=6.30*out[j][k];/' PDD_V1.0.cpp
++ str9='MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.33*out[j][k]);'
++ str10='218s/.*/MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.33*out[j][k]);/'
++ sed -i -r '218s/.*/MIce[j][k]=(0.0067*(10-Tjja)*(10-Tjja)*(10-Tjja))+(6.33*out[j][k]);/' PDD_V1.0.cpp
++ str11='MIce[j][k]=13.08*out[j][k];'
++ str12='220s/.*/MIce[j][k]=13.08*out[j][k];/'
++ sed -i -r '220s/.*/MIce[j][k]=13.08*out[j][k];/' PDD_V1.0.cpp
++ g++ -o al.out PDD_V1.0.cpp -lgsl -lgslcblas -L/home/the/gsl_1.9/lib -lm
++ ./al.out
++ ncl blc_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl sftlf_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl snd_CCSM_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
++ ncl avg_snd.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	1e+20
++ ncl avg_blc.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	9.96921e+36
++ ncl data_out.ncl
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: nah
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	1e+20
+warning:VarVarWrite: rhs has no dimension name or coordinate variable, deleting name of lhs dimension number (0) and destroying coordinate var,  use "(/../)" if this is not desired outcome
+warning:["Execute.c":8575]:Execute: Error occurred at or near line 36 in file data_out.ncl
+
+
